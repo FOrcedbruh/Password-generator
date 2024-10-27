@@ -2,12 +2,12 @@
 
 .container {
     width: 40%;
-    height: 70%;
+    height: 80%;
     display: flex;
     flex-direction: column;
     background-color: #181C14;
     border-radius: 8px;
-    padding: 20px;
+    padding: 30px;
     gap: 40px;
     
 
@@ -21,6 +21,10 @@
         font-size: 24px;
         border-radius: 6px;
         background-color: #3C3D37;
+
+        .copyBtn {
+            cursor: pointer;
+        }
     }
     
     .tools {
@@ -64,6 +68,39 @@
             justify-content: start;
             align-items: center;
             gap: 10px;
+
+            
+        }
+
+        .strength {
+            margin-top: 10%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            background-color: #3C3D37;
+            border-radius: 8px;
+            gap: 20px;
+
+            h2 {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                color: #F4F6FF;
+                font-weight: 600;
+            }
+
+            .difficulty {
+                width: 100%;
+            }
+        }
+
+        .genBtn {
+            width: 100%;
+            height: 60px;
+            color: #F4F6FF;
         }
     }
 }

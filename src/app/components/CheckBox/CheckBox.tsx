@@ -1,19 +1,16 @@
-import { Dispatch, SetStateAction, useState } from "react"
 import { Checkbox } from "../../../components/ui/checkbox"
+import { ICheck } from "../../../types/ICheck"
+import styles from './CheckBox.module.scss'
 
 interface ICheckBoxProps {
-    value: boolean,
-    title: string,
-    isDefaultChecked: boolean
+    props: ICheck
 }
 
-const CheckBox: React.FC<ICheckBoxProps> = ({ value, title, isDefaultChecked }) => {
-
-    const [checked, setChecked] = useState<boolean>(isDefaultChecked)
+const CheckBox: React.FC<ICheckBoxProps> = ({ props }) => {
 
     return (
-        <Checkbox defaultChecked={isDefaultChecked} checked={checked} onCheckedChange={e => setChecked(!!e.checked)} colorPalette="green" variant="subtle">
-            {title}
+        <Checkbox size={"lg"} className={styles.checkbox} checked={props.checked} onCheckedChange={e => props.onAction(!e.checked)} colorPalette="green" variant="subtle">
+            <p>{props.title}</p>
         </Checkbox>
     )
 }
